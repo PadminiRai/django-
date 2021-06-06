@@ -22,7 +22,32 @@ def employee_form(request):
         if form.is_valid():
             form.save()
         return redirect("/employee/list/")
+
 def employee_delete(request):
     return render(request,"employee_list.html")
+
+def safety_ohs_a9(request, *args, **kwargs):
+ context={}
+ return render(request,'employee_register/safety_ohs_sec_a_9.html',context)
+
+def homepagef(request, *args, **kwargs):
+ context={}
+ return render(request,'employee_register/homepage.html',context)
+
+def charityregisterf(request, *args, **kwargs):
+ context={}
+ b1 = request.GET.get('b1')
+ b2 = request.GET.get('b2')
+ if details.objects.filter(uid=b1).count()==0:
+     print("not found")
+ return render(request,'employee_register/charityregister.html',context)
+
+def editschemef(request, *args, **kwargs):
+ context={}
+ return render(request,'employee_register/editscheme.html',context)
+
+def acceptf(request, *args, **kwargs):
+ context={}
+ return render(request,'employee_register/accept.html',context)
 
 
