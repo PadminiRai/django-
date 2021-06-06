@@ -1,0 +1,47 @@
+<html style="background-color: bisque;">
+
+    <body>
+        <div style="align-content: center;font-size: x-large;">
+            <table   >
+                <thead>
+                    Login
+                </thead>
+                <tbody>
+                    <tr>
+                        <td font-size: x-large>
+                            Username : 
+                        </td>
+                        <td>
+                            <input type="text" id="userid"> 
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td font-size: x-large>
+                           Password : 
+                        </td>
+                        <td>
+                            <input type="text" id="pwd"> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" onclick="s();">
+                                submit
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    <script>
+        function s()
+     {   
+     var b1 = document.getElementById("userid").value;alert("s");
+     var b2 = document.getElementById("pwd").value;  
+   
+    window.location.href="{% url 'charityregisterf' %}"+"?b1="+b1+"&b2="+b2;
+  }
+    </script>
+</html>
