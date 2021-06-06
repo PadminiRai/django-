@@ -8,4 +8,9 @@ class Employee(models.Model):
     ename = models.CharField(max_length=20,null = False)
     mobile = models.IntegerField(max_length=10,null = False)
     position = models.ForeignKey(Position,on_delete=models.CASCADE)
+
+class details(models.Model):
+    uid = models.CharField(max_length=10,primary_key=True)
+    pwd = models.CharField(max_length=20,null = False)
+   
 # Create your models here.
